@@ -12,7 +12,7 @@ const bs = require('browser-sync');
 
 
 module.exports = function style() {
-	return src('src/scss/**/*.scss')
+	return src('src/assets/scss/**/*.scss')
 		.pipe(map.init())
 		.pipe(bulk())
 		.pipe(sass({
