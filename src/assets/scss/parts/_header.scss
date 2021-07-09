@@ -9,9 +9,11 @@
 
   font-family: $mainFont;
 
+  @include box-shadow;
+
 
   @media screen and (min-width: 768px) {
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
   }
 }
 
@@ -19,7 +21,7 @@
 
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   width: 100%;
@@ -50,6 +52,7 @@
 
 .header__title {
   margin-right: auto;
+
   font-size: $l-Fs;
   font-weight: 300;
   color: $base;

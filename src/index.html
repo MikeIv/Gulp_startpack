@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 @@include('components/page-blocks/_head.html',{
 "lang":"ru",
-"title":"DMS v0.1",
-"description":"DMS Система управления",
+"title":"Prj v0.1",
+"description":"Новый проект",
 "keywords":"",
 "favicon":"img/favicons/favicon",
 })
@@ -60,33 +60,11 @@
 @@include('components/page-blocks/_footer.html')
 
 
-
-
 @@include('components/page-blocks/_scripts.html')
 
 <script>
 
-  Vue.prototype.$appName = 'Моё приложение';
-
-  function validateComments(input) {
-    if (input.value.length < 6) {
-      input.setCustomValidity("Поле должно содержать более 6 символов");
-    }
-    else {
-      // Длина комментария отвечает требованию,
-      // поэтому очищаем сообщение об ошибке
-      input.setCustomValidity("");
-    }
-  }
-
-
-
-
   new Vue({
-
-    beforeCreate: function () {
-      console.log(this.$appName);
-    },
 
     el: '#modal',
     data: {
@@ -94,30 +72,13 @@
       type: 'password',
       show: false,
       styleref: '',
-      formInfo: {
-        email: '',
-        pass: ''
-      },
+
     },
     methods: {
-      submitForm () {
-          console.log({
-            email:  this.formInfo.email,
-            pass: this.formInfo.pass,
-          })
-          this.formInfo.email = '',
-          this.formInfo.pass = ''
-      },
 
-      styleRef(min, max) {
-        return this.styleref = Math.floor(Math.random() * (max - min + 1)) + min;
-        console.log(this.styleref)
-      },
     },
 
   })
-
-
 
 </script>
 </body>
